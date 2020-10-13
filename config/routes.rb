@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root 'pages#index'
-  get 'pages/index'
+  resources :messages
+  resources :rooms
+  # get '/rooms/:id' => 'rooms#show'
+  # root 'pages#index'
+  # get 'pages/index'
+  root 'rooms#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
